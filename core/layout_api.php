@@ -1049,7 +1049,7 @@ function layout_breadcrumbs() {
 	# Login information
 	echo '<ul class="breadcrumb">' , "\n";
 	if( current_user_is_anonymous() ) {
-		$t_return_page = $_SERVER['SCRIPT_NAME'];
+		$t_return_page = basename( $_SERVER['SCRIPT_NAME'] );
 		if( isset( $_SERVER['QUERY_STRING'] ) && !is_blank( $_SERVER['QUERY_STRING'] )) {
 			$t_return_page .= '?' . $_SERVER['QUERY_STRING'];
 		}
